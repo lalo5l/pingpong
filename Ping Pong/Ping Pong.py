@@ -60,7 +60,7 @@ class Pelota(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = SCREEN_WIDTH / 2
         self.rect.centery = SCREEN_HEIGHT / 2
-        self.speed = [6, 6]
+        self.speed = [4, 4]
         self.sonido_golpe = sonido_golpe
         self.sonido_punto = sonido_punto
 
@@ -98,7 +98,7 @@ class Paleta(pygame.sprite.Sprite):
             self.rect.top = 0
 
     def cpu(self, pelota):
-        self.speed = [0, 4]
+        self.speed = [0, 3.6]
         if pelota.speed[0] >= 0 and pelota.rect.centerx >= SCREEN_WIDTH / 2:
             if self.rect.centery > pelota.rect.centery:
                 self.rect.centery -= self.speed[1]
